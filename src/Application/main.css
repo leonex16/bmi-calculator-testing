@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+  background-color: #333;
+  color: #fff
+}
+
+h1 {
+  color: hsl(193,87%,66%);
+}
+
+input {
+  outline: none;
+  padding: .5rem;
+}
+
+button {
+  padding: .5rem 1rem;
+  font-weight: bold;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid hsl(193,87%,66%);
+  border-radius: 5px;
+  color: hsl(193,87%,66%);
+  cursor: pointer;
+
+  transition: opacity 200ms ease-in-out;  
+}
+
+button:hover {
+  opacity: .7;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+main > * {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-control > label {
+  margin-bottom: .5rem;
+}
