@@ -1,5 +1,5 @@
-import { User } from '@Domain/User/Core/User';
-import { ICalculateBMIUseCase } from './ICalculateBMIUseCase';
+import { User } from '@Domain/User/User';
+import { ICalculateBMIUseCase } from '@Domain/User/UseCases/ICalculateBMIUseCase';
 
 export const calculateBMIUseCaseImpl: ICalculateBMIUseCase = ( user: User ): number => {
   const { height, weight } = user;

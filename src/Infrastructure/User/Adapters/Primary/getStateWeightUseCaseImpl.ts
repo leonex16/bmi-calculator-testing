@@ -1,3 +1,5 @@
+import { StatusWeightExceptions } from '@Domain/User/Exceptions/StatusWeightExceptions';
+
 export const getStateWeightUseCase = ( bmi: number ): string | null => {
   try {
     const STATUS = {
@@ -14,8 +16,12 @@ export const getStateWeightUseCase = ( bmi: number ): string | null => {
         LABEL: 'Over weight',
       },
       OBESE: {
-        BETWEEN: [ 30, 35 ],
+        BETWEEN: [ 30, 40 ],
         LABEL: 'Obese',
+      },
+      EXTREMELY_OBESE: {
+        BETWEEN: [ 40, 100 ],
+        LABEL: 'Extremely obese',
       },
     };
 
@@ -26,14 +32,12 @@ export const getStateWeightUseCase = ( bmi: number ): string | null => {
     } );
 
     if ( statusFound === undefined ) {
-      throw new Error( `Status not found for BMI: ${bmi}` );
+      throw new StatusWeightExceptions( 'Status not found for your BMI' );
     }
 
     return statusFound.LABEL;
-  } catch ( error: unknown ) {
-    if ( error instanceof Error ) {
-      console.error( `Error in getStateWeightUseCase: ${error.message}` );
-    }
+  } catch ( error: any ) {
+    console.error( `Error in getStateWeightUseCase: ${error.message}` );
 
     return null;
   }

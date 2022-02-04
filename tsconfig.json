@@ -17,6 +17,7 @@
     "jsx": "react-jsx",
     "paths": {
       "@Domain/*": ["./src/Domain/*"],
+      "@Infrastructure/*": ["./src/Infrastructure/*"],
     }
   },
   "include": ["./src"],
