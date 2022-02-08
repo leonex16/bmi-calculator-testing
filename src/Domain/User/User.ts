@@ -7,9 +7,9 @@ import { Weight } from '@Domain/User/ValueObjects/Weight';
 type UserProps = {
   id: IUUID,
   name: string,
-  age: number,
-  height: number,
-  weight: number
+  age: string | number,
+  height: string | number,
+  weight: string | number
 }
 
 export class User {
@@ -38,14 +38,14 @@ export class User {
   }
 
   get age(): number {
-    return this._age.value;
+    return Number( this._age.value );
   }
 
   get height(): number {
-    return this._height.value;
+    return Number( this._height.value );
   }
 
   get weight(): number {
-    return this._weight.value;
+    return Number( this._weight.value );
   }
 }

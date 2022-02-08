@@ -1,6 +1,6 @@
 export interface IUserRequest {
   name: string,
-  age: number,
-  height: number,
-  weight: number,
+  age: string | number,
+  height: string | number,
+  weight: string | number,
 }

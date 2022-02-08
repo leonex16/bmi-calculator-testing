@@ -8,8 +8,8 @@ export const UUIDImpl: IUUIDImpl = {
   randomId: {
     generate() {
       const timestamp = +new Date();
-    
+
       return timestamp.toString( 36 );
-    }
-  }
+    },
+  },
 };

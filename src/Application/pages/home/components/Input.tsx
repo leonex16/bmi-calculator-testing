@@ -14,7 +14,7 @@ export function Input( props : InputProps ) {
   return (
     <div className="form-control">
       <label htmlFor={ id }>{ label }</label>
-      <input id={ id } name={ id } type={ type } value={ value } onChange={ handleChangeEvent } />
+      <input id={ id } name={ id } type={ type } value={ value } onChange={ handleChangeEvent } autoComplete="off" />
     </div>
   );
 }

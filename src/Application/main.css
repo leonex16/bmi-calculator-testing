@@ -31,11 +31,19 @@ button {
   color: hsl(193,87%,66%);
   cursor: pointer;
 
-  transition: opacity 200ms ease-in-out;  
+  transition: opacity 200ms ease-in-out,
+  color 200ms ease-in-out,  
+  backgronud-color 200ms ease-in-out;  
 }
 
 button:hover {
   opacity: .7;
+}
+
+button:active {
+  background-color: hsl(193,87%,66%);
+  color: #fff;
+  opacity: 1;
 }
 
 main {
